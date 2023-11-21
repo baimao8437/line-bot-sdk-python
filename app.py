@@ -27,6 +27,7 @@ configuration = Configuration(access_token=os.getenv('LINE_CHANNEL_ACCESS_TOKEN'
 # domain root
 @app.route('/')
 def home():
+    print(os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
     return 'Hello, World!'
 
 @app.route("/callback", methods=['POST'])
